@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h> 
+#include<string.h>
+
+struct funcionario {
+ 	int cod;
+ 	char nome[30];
+ 	float salario;
+ 	int depto;
+ 	int cargo;
+};
+
+
+int main (){
+	setlocale(LC_ALL, "Portuguese");
+
+	struct funcionario Func1, Func2, Func3;
+	printf ("Código Funcionário: ");
+	scanf("%d",&Func1.cargo);
+	
+	printf ("Nome: ");
+	scanf ("%s", &Func1.nome);
+	
+	printf ("Salário: ");
+	scanf ("%f", &Func1.salario);
+	
+	printf ("Departamento: ");
+	scanf ("%d", &Func1.depto);
+	
+/*	//Funcionario2
+	
+	printf ("\n Código Funcionário: ");
+	scanf("%d",&Func2.cargo);
+	
+	printf ("\n Nome: ");
+	gets (&Func2.nome);
+	
+	printf ("\n Salário: ");
+	scanf ("%f", &Func2.salario);
+	
+	printf ("\n Departamento: ");
+	scanf ("%d", &Func2.depto);
+
+//Preenchimento manual
+
+Func3 = {2,"Victor", 1000, 1, 1};
+*/
+
+return 0;
+
+}
