@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h> 
+#include<string.h>
+#include<math.h>
+
+typedef struct Cadastro{
+	char Nome [20];
+	char Fabricante [20];
+	float Valor;
+} Produto;
+
+void MostrarCadastro (char nomeProduto [20], char nomeFabricante[20], float valorProduto, float ValorDesconto, float valorProDesconto);
+float CalculoDesconto (float valorprod, float percentual);
+
+float desconto, calculo;
+
+int main (){
+	setlocale(LC_ALL, "Portuguese");
+	
+	Produto p1;
+	
+	printf("Informe o nome do produto: ");
+	gets(p1.Nome);
+	printf("Informe o fabricante: ");
+	gets(p1.Fabricante);
+	printf ("Valor do produto: ");
+	scanf("%f", &p1.Valor);
+	
+	printf ("Quanto de desconto será aplicado: ");	
+	scanf("%f", &desconto);
+	
+	calculo = CalculoDesconto(p1.Valor,desconto);
+
+	printf ("\n Cadastro atualizado \n \n");
+	
+	MostrarCadastro(p1.Nome,p1.Fabricante, p1.Valor, desconto, calculo);
+	
+return 0;
+
+}	
+
+void MostrarCadastro (char nomeProduto [20], char nomeFabricante[20], float valorProduto, float ValorDesconto, float valorProDesconto){
+	
+	printf("\n Produto: %s", nomeProduto);
+	printf("\n Fabricante: %s ", nomeFabricante);
+	printf("\n Valor Produto: %.2f", valorProduto);
+	printf("\n Desconto: %.2f %", ValorDesconto );
+	printf("\n Novo valor com desconto  %.2f", valorProDesconto);
+	
+}
+float CalculoDesconto (float valorprod, float percentual){
+	float calculo = valorprod - (valorprod * (percentual/100));
+	return calculo;
+	
+}
