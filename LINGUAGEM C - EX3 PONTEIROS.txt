@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h> 
+
+int Num [5], *pNum;
+int i;
+
+int main(){
+setlocale(LC_ALL, "Portuguese");
+
+for (i=0; i<5; i++){
+	pNum = Num;
+	printf("Informe o número [%d]: ", i);
+	scanf ("%d", (pNum+i));
+}
+
+printf ("\n\n-----------------\n\n");
+
+for (i=0;i<5;i++){
+	printf ("\nDobro do número [%d]: %d", i, *(pNum+i)*2);
+	
+}
+
+
+
+
+
+return 0;
+}
+

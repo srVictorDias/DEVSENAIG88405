@@ -1,0 +1,28 @@
+\\Array ponteiro
+
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h> 
+
+ int *vNum[5], x,y;
+ 
+int main(){
+	
+setlocale(LC_ALL, "Portuguese");
+
+x = 10;
+y=10;
+
+vNum[0] = &x;
+vNum[1] = &y;
+
+printf ("\nEndereço vNum[0] = %p ", vNum[0] );
+printf ("\nEndereço vNum[1] = %p ", vNum[1] );
+*vNum[0] = *vNum[0] + 10; 
+printf ("\nValor de X = %d ", *vNum[0] );
+printf ("\nValor de Y = %d ", *vNum[1] );
+
+return 0;
+}
+
+

@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int *pNum, Num, a ,b;
+
+int main(){
+
+pNum = &Num;
+printf ("\nInforme o ano atual: ");
+scanf("%d", &Num);
+
+printf ("\nO ano informado foi -> %d ",Num );
+
+*pNum = 2023;
+
+printf ("\nAno corrigido %d", *pNum);
+printf ("\nAno corrigido %d", Num);
+printf ("\nEndereço da variável %p", *pNum);
+
+
+
+
+return 0;
+}
+

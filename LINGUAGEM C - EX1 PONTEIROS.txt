@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h> 
+#include<string.h>
+#include<math.h>
+
+
+
+int main (){
+	setlocale(LC_ALL, "Portuguese");
+	// declação de um ponteiro
+	int *p1;
+	float *p2;
+	double *p3;
+	char *nome;
+
+ 	int num1=10;
+ 	p1 = &num1;
+ 	//*p1 = 20;
+ 	
+ 	printf ("\n Valor de num1 = %d ", num1);
+ 	printf( "\n Endereço de num1 %p", *p1);
+ 	printf ("\n Conteudo apontado por p1 = %d", *p1);
+ 
+ 	
+return 0;
+
+}	

@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h> 
+
+int i;
+ 
+int main(){
+	
+setlocale(LC_ALL, "Portuguese");
+
+int vetNum[5] = {1,2,3,4,5};
+
+int *pVet = vetNum;
+
+for(i=0;i<5;i++){
+	printf ("\nEndereço de memória vet[%d] = %p ",i,pVet[i]);
+	
+}
+
+
+
+return 0;
+}
+

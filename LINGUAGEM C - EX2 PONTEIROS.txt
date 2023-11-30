@@ -1,0 +1,23 @@
+1 #include <stdio.h>
+2 #include <stdlib.h>
+3 4
+void main()
+5 {
+6 int *pNum; //declaracao de ponteiro
+7 int num, num2;
+8 pNum = &num; //aponta pNum para num
+9 *pNum = 10; //atribui valor a num por meio do apontamento
+10 num2 = 20; //atribui valor a num2
+11 num2 += *pNum; //atribui valor a num2 por meio do ponteiro
+12
+13 //obtendo valor de variaveis
+14 printf("conteudo de num: %d \n", num);
+15 printf("endereco de num: %d \n", &num);
+16 printf("conteudo de num2: %d \n", num2);
+17 printf("endereco de num2: %d \n", &num2);
+18
+19 //obtendo valor de ponteiros
+20 printf("conteudo de pNum: %d \n", pNum);
+21 printf("conteudo do apontamento de pNum: %d \n", *pNum);
+22 printf("endereco de pNum: %d \n", &pNum);
+23 }
